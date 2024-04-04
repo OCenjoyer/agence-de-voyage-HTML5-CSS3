@@ -1,0 +1,759 @@
+/****** General ***********/
+
+/* Définition des styles généraux pour la page */
+* {
+    font-family: 'Raleway', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+}
+
+/* Définition des variables de couleurs utilisées */
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+}
+
+/* Style des icônes solides FontAwesome */
+.fa-solid {
+    color: var(--main-color);
+}
+
+/* Style du corps de la page */
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* Style du conteneur principal avec une largeur maximale */
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+/* Style des liens */
+a {
+    color: #000;
+}
+
+/* Style des icônes générales */
+i {
+    color: var(--main-color);
+}
+
+/******* header *******/
+
+/* Style de la barre de navigation globale */
+
+
+/* Style du logo dans la barre de navigation */
+.global-nav img {
+    display: flex;
+    flex-direction: column;
+    width: 61px;
+    height: 19px;
+    padding: 30px 50px 30px 0;
+}
+
+.global-nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    height: 79px;
+    margin-bottom: 30px;
+}
+
+/* Style de la navigation principale */
+nav {
+    display: flex;
+    gap: 68px;
+    height: 33px;
+    padding: 0px 0px 0px 50px;
+}
+
+/* Style des liens de navigation */
+nav a {
+    color: black;
+    text-align: center;
+    padding-top: 14px;
+    font-size: 16px;
+    border-top: 2px solid transparent;
+}
+
+/* Style des liens de navigation au survol */
+nav a:hover {
+    border-top: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+/********* main search-bar *********/
+
+/* Style de la section de recherche principale */
+.recherche {
+    margin-top: 30px;
+}
+
+/* Style du titre de la section de recherche */
+.recherche h1 {
+    margin-bottom: 8px;
+}
+
+/* Style du paragraphe de la section de recherche */
+.recherche p {
+    margin-top: 8px;
+    margin-bottom: 35px;
+    color: rgb(78, 77, 77);
+}
+
+/* Style de la barre de recherche principale */
+.recherche .map {
+    display: flex;
+}
+
+/* Style de l'icône de recherche */
+.recherche .fa-solid {
+    background-color: #F2F2F2;
+    color: #000;
+    border-radius: 15px 0 0 15px;
+    height: 49px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 112%;
+}
+
+/* Style de la zone de saisie de recherche */
+.recherche input {
+    position: relative;
+    height: 49px;
+    width: 236px;
+    border: #F2F2F2 1px solid;
+    font-weight: bold;
+    font-size: 119%;
+}
+
+/* Style du texte de l'indicateur de saisie */
+.recherche input::placeholder {
+    color: black;
+    padding: 0px 20px 0px 20px;
+}
+
+/* Style du bouton de recherche pour la version desktop */
+.recherche #recherche-desktop {
+    border-radius: 0 15px 15px 0;
+    border: none;
+    height: 49px;
+    width: 132px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #0065FC;
+    cursor: pointer;
+}
+
+.recherche #recherche-mobile {
+    display: none;
+}
+
+/**********filters-section-icon*************/
+
+/* Style de la section des filtres */
+.filtres {
+    display: flex;
+    margin: 35px 0 0 0px;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Style du texte des filtres */
+.filtres p {
+    font-weight: bold;
+}
+
+/* Style de la deuxième section de filtres */
+.filtres2 {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Style de la troisième section de filtres */
+.filtres3 {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: 2px solid #d9d9d9;
+    border-radius: 40px;
+    padding: 4px 19px;
+    transition: 0.3s;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+/* Style au survol de la troisième section de filtres */
+.filtres3:hover {
+    background-color: #DEEBFF;
+    border: 2px solid #DEEBFF;
+    cursor: pointer;
+}
+
+/* Style de rotation des icônes au survol */
+.filtres3:hover .filters-icons {
+    transform: rotate(15deg);
+}
+
+/** info-section **/
+
+/* Style de la section d'informations */
+.infos {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+/* Style de la deuxième section de recherche d'informations */
+.recherche2 {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    gap: 10px;
+}
+
+/* Style de l'icône d'information */
+.recherche2 .fa-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+    border: 1px solid #d9d9d9;
+    width: 24px;
+    height: 24px;
+    font-size: 81%;
+    border-radius: 50%;
+}
+
+/* Style du texte de la deuxième section d'informations */
+.recherche2 p {
+    font-size: 106%;
+    color: rgb(59, 59, 59);
+}
+
+/********* main *********/
+
+/* Style des éléments de texte sombre */
+.noir {
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Style de la carte générale */
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+/* Style de l'image de la carte */
+.card img {
+    object-fit: cover;
+}
+
+/* Style du titre de la carte */
+.numero2 {
+    font-size: 16px;
+}
+
+/* Style du texte "euro" en gras */
+.euro {
+    font-weight: 700;
+}
+
+/* Style de l'étoile neutre */
+.neutral-star {
+    color: var(--main-bg-color);
+}
+
+/* Style de l'évaluation */
+.eval {
+    color: #0065FC;
+    margin: 0px 0px 0px 15px;
+}
+
+/****** Hebergements And Populaires ***********/
+
+/* Style du conteneur pour hébergements et populaires */
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+/****** Card Hebergements ***********/
+
+/* Style de la section des hébergements */
+.hébergements {
+    width: 67%;
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Style de la section des hôtels */
+.hotels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Style des éléments "clique" dans les hébergements */
+.clique {
+    width: 30%;
+    min-width: 120px;
+    background-color: white;
+    padding: 5px;
+    margin-top: 33px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #DADADA;
+    transition: 0.3s;
+}
+
+/* Style de l'image dans la section "clique" */
+.clique img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* Style de la section "haut" dans les hébergements */
+.haut {
+    margin: 1px 0px 8px 15px;
+}
+
+/* Style de la section "mid" dans les hébergements */
+.mid {
+    margin: 8px 0px 8px 15px;
+}
+
+/* Style du texte "afficher" dans les hébergements */
+.afficher {
+    font-size: 18px;
+    margin-top: 33px;
+}
+
+/****** Populaires ***********/
+
+/* Style de la section des populaires */
+.populaires {
+    width: 32%;
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Style du titre de la section populaires */
+.populaires-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style des cartes dans la section populaires */
+.populaires2 .card {
+    margin-right: 30px;
+    display: flex;
+    margin-top: 33px;
+}
+
+/* Style de l'image dans les cartes populaires */
+.populaires2 img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* Style de la section "dedans" dans les cartes populaires */
+.populaires2 .dedans {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Style du titre dans les cartes populaires */
+.populaires2 .numero2 {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+/* Style du sous-titre dans les cartes populaires */
+.populaires2 .numero3 {
+    margin: 0;
+}
+
+/* Style de la section des cartes populaires */
+.populaires2 {
+    margin-bottom: 5px;
+}
+
+/*******Activités card*********/
+
+/* Style de la section des activités */
+#activités {
+    margin-bottom: 35px;
+    padding: 30px;
+}
+
+/* Style du titre de la section activités */
+#activités h2 {
+    font-size: 22px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+/* Style des nombres dans la section activités */
+.nombres {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Style de la deuxième section des activités */
+.activités2 {
+    width: 30%;
+}
+
+/* Style de chaque article dans la section activités */
+.activités2 article {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px #DADADA;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Style de l'image dans chaque article des activités */
+.activités2 img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/* Style du titre dans chaque article des activités */
+.activités2 h3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 16px;
+    padding: 20px 19px;
+    gap: 10px;
+    margin: 0px;
+}
+
+/********footer***********/
+
+/* Style de la première section du pied de page */
+.footer1 {
+    max-width: 1440px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #F2F2F2;
+    padding: 20px;
+    margin-bottom: -10px;
+}
+
+/* Style de la deuxième section du pied de page */
+.footer2 {
+    width: 33%;
+}
+
+/* Style de la liste dans la deuxième section du pied de page */
+.footer2 ul {
+    padding-left: 0px;
+    margin: 0;
+}
+
+/* Style des éléments de liste dans la deuxième section du pied de page */
+.footer2 li {
+    margin-top: 15px;
+}
+
+/****** Media queries ***********/
+@media screen and (max-width: 1271px) and (min-width: 769px) {
+    .activités-card h3{
+        height: 20px;
+    }
+}
+/* support (tablets, less/equal than 1024px) */
+@media screen and  (max-width: 1024px) and (min-width: 769px) {
+    /*  global */ 
+
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+/*  tablette Nav et lien */
+    .global-nav ul {
+        margin: 14px 50px 0px 50px;
+    }
+/** media tablette section filtres */
+    .filtres{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    /* tablette infos-section */
+    .infos {
+        margin-bottom: 0px ;
+    } 
+    .recherche2 .fa-info {
+        width: 24px;
+        height: 24px;
+    }
+    /* tablette hébergement */ 
+    .hébergements {
+        width: 100%;
+        margin-top: 50px;
+    }
+/*  tablette populaire */
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+    .populaires2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+/* Style des cartes dans la section populaires */
+.populaires2 .card {
+    margin-right: 30px;
+    display: flex;
+    margin-top: 33px;
+    width: 100%;
+}
+
+    .populaires2 .numero2 {
+        font-size: 14px;
+    }
+
+    .populaires-cards .numero3 {
+        font-size: 13px;
+    }
+/* tablette activités à marseille */
+    .nombres {
+        display: flex;
+        height: 270px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .activités2 article {
+        width: 100%;
+    }
+    .activités2 img {
+        height: 200px;
+    }
+    .activités2 h3 {
+        width: 73%;
+        height: 20px;
+    }
+/* footer tablette */ 
+    .footer1 {
+        gap: 30px;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 768px) and (min-width: 320px){
+    .main-container {
+        padding: 0;
+    }
+/* header partie mobile */
+    .global-nav {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .ancres img {
+        padding: 30px;
+    }
+    .ancres {
+        width: 100%;
+        padding: 0;
+    }
+    .ancres nav {
+        gap: 0;
+        padding: 0;
+    }
+    .ancres a {
+        width: 50%;
+        border-bottom: 15px ;
+        border-bottom: 2px solid transparent;
+        border-top: 0;
+        padding-top: 0;
+    }
+    .ancres a:hover {
+        border-top: transparent;
+        border-bottom: 2px solid var(--main-color);
+    }
+/* barre de recherche */ 
+    .recherche {
+        padding: 0 20px;
+    }
+    .map #recherche-mobile {
+        padding: 0;
+        width: 15%;
+    }
+    .map #recherche-desktop {
+        display: none;
+    }
+    .map #recherche-mobile {
+        display: flex;
+        border-radius: 15px;
+        width: 49px;
+        height: 49px;
+        position: relative;
+        right: 15px;
+        align-items: center;
+        font-weight: bold;
+        justify-content: center;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .map i {
+        background-color: var(--main-color);
+        color: #ffffff;
+        height: 0;
+    }
+/*  filtres de section */
+    .filtres {
+        display: flex;
+        padding: 0 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .filtres2 {
+        display: flex;
+        width: 100%;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .filtres3 {
+        width: 49%;
+        margin-bottom: 20px;
+        font-size: 13px;
+    }
+/* infos section */
+    .infos {
+        padding: 0 20px;
+    }
+    .recherche2 .fa-info {
+        max-width: 24px;
+        max-height: 24px;
+    }
+/* hébergement and populaires */
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+        gap: 15px;
+    }
+    /* cartes d'hébergements */
+    .hébergements {
+        display: block;
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 35px;
+        background-color: #ffffff;
+    }
+    .hébergements .hébergementmarseille {
+        margin-bottom: 15px;
+    }
+    .hotels {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .clique{
+        width: 97%;
+        margin-top: 0;
+    }
+    .afficher {
+        margin-top: 15px;
+    }
+
+/* les plus populaires */
+    .populaires {
+        width: 100%;
+        border-radius: 0;
+        padding: 30px 20px;
+    }
+    .card {
+    width: 98%;
+    height: 146px;
+    }
+    .card img {
+        height: 146px;
+    }
+/* activité à marseillles */
+    #activités {
+        display: flex;
+        padding: 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nombres {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .activités2 {
+        width: 100%;
+    }
+    .activités2 img{
+        width: 100%;
+        height: 141px;
+    }
+/* footer de la page*/
+    .footer1 {
+        padding: 30px;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .footer2 {
+        width: 263px;
+    }
+    .footer2 h4 {
+        margin-bottom: 15px;
+
+    }
+    .footer2 li {
+        margin-top: 0;
+    }
+    .footer2 ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}
