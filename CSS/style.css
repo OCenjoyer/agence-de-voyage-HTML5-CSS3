@@ -583,6 +583,13 @@ nav a:hover {
     .main-container {
         padding: 0;
     }
+
+    @media screen and (max-width: 768px) {
+        .recherche input {
+          width: 100%;
+        }
+    }
+
 /* header partie mobile */
     .global-nav {
         height: auto;
